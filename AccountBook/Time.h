@@ -19,6 +19,7 @@ public:
 	bool setHour(const short sHour);
 	bool setMinute(const short sMinute);
 	bool setSecond(const short sSecond);
+	void setError();
 
 
 	time_t getTIme();
@@ -30,6 +31,7 @@ public:
 	short getHour();
 	short getMinute();
 	short getSecond();
+	bool getError();
 
 	bool isLeafYear();
 	bool isLeafYear(const Time & time);

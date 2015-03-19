@@ -14,17 +14,35 @@ bool Time::setTime(const time_t  lCLibraryTime)
 	tm timeStructure; 
 	localtime_s(&timeStructure,&lCLibraryTime);
 	if (!setYear(timeStructure.tm_year + 1900))
+	{
+		setError();
 		return false;
+	}
 	if (!setMonth(timeStructure.tm_mon + 1))
+	{
+		setError();
 		return false;
+	}
 	if (!setDay(timeStructure.tm_mday))
+	{
+		setError();
 		return false;
+	}
 	if (!setHour(timeStructure.tm_hour))
+	{
+		setError();
 		return false;
+	}
 	if (!setMinute(timeStructure.tm_min))
+	{
+		setError();
 		return false;
+	}
 	if (!setSecond(timeStructure.tm_sec))
+	{
+		setError();
 		return false;
+	}
 
 	return true;
 }
@@ -41,17 +59,35 @@ bool Time::setTime(const char acString[])
 		acMonth, 3, acDay, 3, acHour, 3, acMinute, 3, acSecond, 3);
 
 	if (!setYear(atoi(acYear)))
+	{
+		setError();
 		return false;
+	}
 	if (!setMonth(atoi(acMonth)))
+	{
+		setError();
 		return false;
+	}
 	if (!setDay(atoi(acDay)))
+	{
+		setError();
 		return false;
+	}
 	if (!setHour(atoi(acHour)))
+	{
+		setError();
 		return false;
+	}
 	if (!setMinute(atoi(acMinute)))
+	{
+		setError();
 		return false;
+	}
 	if (!setSecond(atoi(acSecond)))
+	{
+		setError();
 		return false;
+	}
 
 	return true;
 
@@ -189,10 +225,25 @@ bool Time::isLeafYear()
 
 }
 
+
+
+void Time::setError()
+{
+	sMonth = 0;
+	sDay = 0;
+}
+
+bool Time::getError()
+{
+	if (sMonth == 0 || sDay == 0)
+		return true;
+
+	return false;
+}
+
 Time::Time()
 	:sYear(0), sMonth(0), sDay(0), sHour(0), sMinute(0), sSecond(0)
 {
-	setTime(time(NULL));
 }
 
 Time::Time(const time_t lCLibraryTime)

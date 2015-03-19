@@ -1,0 +1,17 @@
+Book
+¦¦Spending
+	¦¦SpendingData <<=Data
+	¦¦RegularSpendingData <<=SpendingData
+¦¦Earning
+	¦¦EarningData <<=Data
+	¦¦RegularEarningData <<=EarningData
+DBMSTool
+FileManagementTool
+MetadataTool
+StatisticTool
+Data
+¦¦Time
+
+
+¦¦	:IncludClass
+<<==	:InheritClass
