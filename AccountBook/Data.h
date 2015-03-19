@@ -10,11 +10,13 @@ public:
 	Data();
 	~Data();
 
-	bool setMoney(unsigned long lAmount);
+	bool setMoney(const unsigned long lAmount);
 	bool setComment(char Comment[]);
+	bool setType(const short sDataType);
+	bool setProperty(const short sDataProperty);
 
-	Time getRegisteredDate() const;
-	Time getApprovedDate() const;
+	Time & getRegisteredDate() ;
+	Time & getApprovedDate();
 
 	const char * getComment() ;
 	unsigned long getMoney() const;

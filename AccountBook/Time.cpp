@@ -157,6 +157,10 @@ bool Time::setSecond(const short sSecond)
 
 time_t Time::getTIme()
 {
+
+	if (getError())
+		return -1;
+
 	tm tempTimeStructure;
 	tempTimeStructure.tm_year = getYear()-1900;
 	tempTimeStructure.tm_mon = getMonth()-1;
@@ -169,6 +173,9 @@ time_t Time::getTIme()
 
 bool Time::getTIme(char acString[], const int iStringSize)
 {
+	if (getError())
+		return false;
+
 	if (iStringSize < 15)
 		return false;
 

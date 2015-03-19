@@ -1,12 +1,13 @@
 #include "Data.h"
 #include <cstring>
 
-Time Data::getApprovedDate() const
+
+Time & Data::getApprovedDate() 
 {
 	return oApprovedDate;
 }
 
-Time Data::getRegisteredDate() const
+Time & Data::getRegisteredDate() 
 {
 	return oRegisteredDate;
 }
@@ -35,7 +36,7 @@ unsigned long Data::getMoney() const
 	return lMoney;
 }
 
-bool Data::setMoney(unsigned long lAmount)
+bool Data::setMoney(const unsigned long lAmount)
 {
 	if (lAmount < 0)
 		return false;
@@ -56,8 +57,21 @@ bool Data::setComment(char Commnet[])
 
 
 
+bool Data::setProperty(const short sDataProperty)
+{
+	sProperty = sDataProperty;
+	return true;
+}
+
+bool Data::setType(const short sDataType)
+{
+
+}
+
+
 
 Data::Data()
+	:oRegisteredDate(time(NULL))
 {
 
 }
