@@ -19,7 +19,6 @@ public:
 	//#####################################################################
 
 	//get Time object
-	// return date
 	Time& getDate();
 
 	//get amount of money

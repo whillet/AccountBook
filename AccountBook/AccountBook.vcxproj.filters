@@ -24,37 +24,10 @@
     <ClCompile Include="Data.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MetadataTool.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SpendingData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="EarningData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="RegularSpendingData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="RegularEarningData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="StatisticsTool.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DBMSTool.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="FileManagementTool.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Earning.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Book.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Spending.cpp">
+    <ClCompile Include="DataManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,37 +38,10 @@
     <ClInclude Include="Data.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="MetadataTool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SpendingData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="EarningData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="RegularSpendingData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="RegularEarningData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="StatisticsTool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="DBMSTool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="FileManagementTool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Earning.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Book.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Spending.h">
+    <ClInclude Include="DataManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
