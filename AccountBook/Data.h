@@ -1,4 +1,7 @@
 #pragma once
+
+//copyright (c) 2015 woochankim
+
 #include "Time.h"
 
 
@@ -7,39 +10,58 @@ class Data
 
 public:
 
+
+	//constructure
 	Data();
 	~Data();
 
-	bool setMoney(const unsigned long lAmount);
-	bool setComment(char Comment[]);
-	bool setType(const short sDataType);
-	bool setProperty(const short sDataProperty);
+	//interface
+	//#####################################################################
 
-	Time & getRegisteredDate() ;
-	Time & getApprovedDate();
+	//get Time object
+	// return date
+	Time& getDate();
 
-	const char * getComment() ;
-	unsigned long getMoney() const;
-	short getType() const;
-	short getProperty() const;
-	int getMetadata() const;
-	
-	const static unsigned int SIZE_OF_COMMENTS = 31;
+	//get amount of money
+	//return moneyValue
+	unsigned long getMoneyValue();
+
+	//get categoryCode
+	//retutn categoryCode
+	unsigned int getCategoryCode();
+
+	//get comment string
+	//return comment
+	char* getComment();
+
+	//get data id
+	//return id;
+	unsigned int getId();
+
+	//Set :: if set is success, return true else return false
+
+	//set amount of money
+	//moneyValue : amount of money
+	bool setMoneyValue(const unsigned long moneyValue);
+
+	//set categoryCode
+	//categoryCode : category code
+	bool setCategoryCode(const unsigned int categoryCode);
+
+	//set comment
+	//commentString : comment
+	bool setComment(const char * commentString);
+
+	//#################################################################
+
+	//constants
+	const static unsigned int SIZE_OF_COMMENT = 80;
 
 private:
-
-
-
-	Time oRegisteredDate;
-	Time oApprovedDate;
-
-	char acComment[SIZE_OF_COMMENTS];
-
-	unsigned long lMoney;
-
-	short sType;
-	short sProperty;
-	int iMetadata;
-
+	// dataType
+	unsigned int id;
+	Time date;
+	unsigned long moneyValue;
+	unsigned int categoryCode;
+	char comment[SIZE_OF_COMMENT];
 };
-
